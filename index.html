@@ -15,13 +15,91 @@
   <link href="css/tiny-slider.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>Galaxee Flowmate</title>
+  
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0b5ed7;
+      --secondary: #6c757d;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --body-color: #333;
+      --body-bg: #fff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--body-color);
+      background-color: var(--body-bg);
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation */
+    .custom-navbar {
+      padding: 1rem 0;
+      background-color: white !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .custom-navbar .navbar-brand {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    /* SVG Hero Section - Fixed for mobile */
+    .svg-hero {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: block;
+      line-height: 0;
+    }
+
+    .svg-hero-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .svg-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 767.98px) {
+      .custom-navbar .navbar-brand {
+        font-size: 1.5rem;
+      }
+      
+      .svg-hero {
+        margin-top: 0;
+      }
+      
+      .svg-hero img {
+        min-height: auto;
+        max-height: 50vh; /* Adjust this value as needed */
+      }
+    }
+
+    /* The rest of your existing CSS can go here */
+    /* ... (all your other CSS rules) ... */
+  </style>
 </head>
 
 <body>
   <!-- Start Header/Navigation -->
-  <nav class="custom-navbar navbar navbar-expand-lg navbar-light bg-white">
+  <nav class="custom-navbar navbar navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Galaxee Flowmate</a>
+      <a class="navbar-brand" href="index.html">Elevate Every Drop.</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,8 +111,15 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="products.html" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="faucet.html">Faucet</a></li>
+              <li><a class="dropdown-item" href="product-2.html">Shower</a></li>
+              <li><a class="dropdown-item" href="product-3.html">Floor Drain Net</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog.html">Blog</a>
@@ -50,16 +135,119 @@
 
   <!-- Start Hero Section -->
   <div class="svg-hero">
-    <div class="container-fluid px-0">
-      <img src="images/Frame 1.svg" alt="Galaxee Flowmate Hero" class="img-fluid w-100">
+    <div class="svg-hero-container">
+      <img src="images/Frame 1.svg" alt="Galaxee Flowmate Hero">
     </div>
   </div>
   <!-- End Hero Section -->
 
-  <!-- Rest of your content sections would go here -->
+
+
+   <!-- Footer -->
+   <footer class="footer-section py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo-wrap mb-4">
+            <a href="index.html" class="footer-logo">
+              <span class="text-primary">Galaxee</span> <span class="text-dark">Flowmate</span>
+            </a>
+          </div>
+          <p class="mb-4">Crafting premium bath accessories that combine elegance with functionality to transform your daily routine into a luxurious experience.</p>
+          <ul class="list-unstyled custom-social">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="mb-4">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="index.html">Home</a></li>
+                <li class="mb-2"><a href="products.html">Products</a></li>
+                <li class="mb-2"><a href="collections.html">Collections</a></li>
+                <li class="mb-2"><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-0">
+              <h5 class="mb-4">Products</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Shower Systems</a></li>
+                <li class="mb-2"><a href="#">Faucets</a></li>
+                <li class="mb-2"><a href="#">Bathroom Accessories</a></li>
+                <li class="mb-2"><a href="#">Vanity Units</a></li>
+                <li><a href="#">Smart Bath Tech</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <h5 class="mb-4">Support</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">FAQ</a></li>
+                <li class="mb-2"><a href="#">Shipping & Returns</a></li>
+                <li class="mb-2"><a href="#">Product Care</a></li>
+                <li class="mb-2"><a href="#">Warranty</a></li>
+                <li><a href="#">Trade Professionals</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-top pt-4 mt-5">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Galaxee Flowmate. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+              <li class="list-inline-item"><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/tiny-slider.js"></script>
   <script src="js/custom.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownElements = document.querySelectorAll('.dropdown');
+      
+      if ('ontouchstart' in window) {
+        dropdownElements.forEach(function(dropdown) {
+          dropdown.addEventListener('click', function(e) {
+            if (this.classList.contains('show')) {
+              return;
+            }
+            e.preventDefault();
+            const dropdownMenu = this.querySelector('.dropdown-menu');
+            dropdownMenu.classList.add('show');
+          });
+        });
+      } else {
+        dropdownElements.forEach(function(dropdown) {
+          dropdown.addEventListener('mouseenter', function() {
+            this.querySelector('.dropdown-menu').classList.add('show');
+          });
+          
+          dropdown.addEventListener('mouseleave', function() {
+            this.querySelector('.dropdown-menu').classList.remove('show');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
